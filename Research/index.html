@@ -11,8 +11,8 @@
 <meta name="theme-color" content="#222">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-robot.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-robot.png?v=7.3.0">
   <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
 
 <link rel="stylesheet" href="/css/main.css?v=7.3.0">
@@ -62,7 +62,7 @@
 <meta property="og:site_name" content="Xinghao Zhu">
 <meta property="og:description" content="1. Optimization Model for Planning Precision Grasps with Multi-Fingered HandsGrasp planning for multi-fingered hands is challenging due to the high-dimensionality, collision and sensing/actuation unce">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-28T20:19:43.789Z">
+<meta property="og:updated_time" content="2019-08-28T22:27:50.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Research">
 <meta name="twitter:description" content="1. Optimization Model for Planning Precision Grasps with Multi-Fingered HandsGrasp planning for multi-fingered hands is challenging due to the high-dimensionality, collision and sensing/actuation unce">
@@ -245,12 +245,10 @@
       
       <div class="post-body">
         
-          <h4 id="1-Optimization-Model-for-Planning-Precision-Grasps-with-Multi-Fingered-Hands"><a href="#1-Optimization-Model-for-Planning-Precision-Grasps-with-Multi-Fingered-Hands" class="headerlink" title="1. Optimization Model for Planning Precision Grasps with Multi-Fingered Hands"></a>1. <a href="https://www.decf.berkeley.edu/~yongxiangfan/IROS2019/ppojpo.html" target="_blank" rel="noopener">Optimization Model for Planning Precision Grasps with Multi-Fingered Hands</a></h4><p>Grasp planning for multi-fingered hands is challenging due to the high-dimensionality, collision and sensing/actuation uncertainties. We propose an optimization model to solve the grasp planning problem. The optimization considers several geometric related qualities and collisions, and is relaxed with the proposed optimization modeling method. The relaxed optimization is solved by the proposed iterative PPO-JPO. PPO stands for the palm pose optimization while JPO stands for the joint position optimization. The proposed optimization model is able to locate collision-free optimal precision grasps efficiently. The average computation time is 0.50 sec/grasp. The searching is robust to the incompleteness and noise of the point cloud. <a href="/Publications/OptimizationModelforPlanningPrecisionGraspswithMulti-FingeredHands.pdf">PDF</a></p>
+          <h4 id="1-Optimization-Model-for-Planning-Precision-Grasps-with-Multi-Fingered-Hands"><a href="#1-Optimization-Model-for-Planning-Precision-Grasps-with-Multi-Fingered-Hands" class="headerlink" title="1. Optimization Model for Planning Precision Grasps with Multi-Fingered Hands"></a>1. Optimization Model for Planning Precision Grasps with Multi-Fingered Hands</h4><p>Grasp planning for multi-fingered hands is challenging due to the high-dimensionality, collision and sensing/actuation uncertainties. We propose an optimization model to solve the grasp planning problem. The optimization considers several geometric related qualities and collisions, and is relaxed with the proposed optimization modeling method. The relaxed optimization is solved by the proposed iterative PPO-JPO. PPO stands for the palm pose optimization while JPO stands for the joint position optimization. The proposed optimization model is able to locate collision-free optimal precision grasps efficiently. The average computation time is 0.50 sec/grasp. The searching is robust to the incompleteness and noise of the point cloud. <a href="/Publications/OptimizationModelforPlanningPrecisionGraspswithMulti-FingeredHands.pdf">PDF</a>, <a href="/2019/08/28/ppojpo/">Website</a></p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PQhHw4qFKT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+---
 
-
-
-<hr>
 <h4 id="2-Robotic-Manipulation-of-Deformable-Objects-with-Real-Time-Tracking"><a href="#2-Robotic-Manipulation-of-Deformable-Objects-with-Real-Time-Tracking" class="headerlink" title="2. Robotic Manipulation of Deformable Objects with Real-Time Tracking"></a>2. Robotic Manipulation of Deformable Objects with Real-Time Tracking</h4><p>The aim of the project was to enable robots to accurately manipulate a deformable object (ropes) using complex motions; manipulation of deformable objects is a challenge in robotics because deformable objects have high degree of freedom and mutable shapes, which makes the position of the object and the trajectory of the robot difficult to calculate mathematically.</p>
 <p>Used an observer to track the rope in real-time and to provide the estimated states to a trajectory planner; the trajectory planner generated motions for robots to enable them to manipulate the rope to a randomly given shape.</p>
 <p>Implemented the observer in Ubuntu 14.04 LTS with C++ using Robot Operation System; constructed a virtual rope in the observer as a set of connected nodes with Bullet Physic Engine; used Gaussian Mixture Model (GMM) with Coherent Point Drift (CPD) algorithm to update the physics engine.</p>
