@@ -56,17 +56,17 @@
   };
 </script>
 
-  <meta name="description" content="Contrastive 6-DoF Grasp Proposal NetworkXinghao Zhu+, Lingfeng Sun+ , Yongxiang Fan and Masayoshi Tomizuka + denotes equal contributions. Welcome to this page. This page supplements our ICRA2021 paper">
+  <meta name="description" content="6-DoF Contrastive Grasp Proposal NetworkXinghao Zhu+, Lingfeng Sun+ , Yongxiang Fan and Masayoshi Tomizuka + denotes equal contributions. Welcome to this page. This page supplements our ICRA2021 paper">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Research Introduction">
 <meta property="og:url" content="https://rolandzhu.github.io/2020/10/29/CGPN/index.html">
 <meta property="og:site_name" content="Xinghao Zhu (朱行昊)">
-<meta property="og:description" content="Contrastive 6-DoF Grasp Proposal NetworkXinghao Zhu+, Lingfeng Sun+ , Yongxiang Fan and Masayoshi Tomizuka + denotes equal contributions. Welcome to this page. This page supplements our ICRA2021 paper">
+<meta property="og:description" content="6-DoF Contrastive Grasp Proposal NetworkXinghao Zhu+, Lingfeng Sun+ , Yongxiang Fan and Masayoshi Tomizuka + denotes equal contributions. Welcome to this page. This page supplements our ICRA2021 paper">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-10-30T08:06:11.913Z">
+<meta property="og:updated_time" content="2020-11-04T21:31:33.459Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Research Introduction">
-<meta name="twitter:description" content="Contrastive 6-DoF Grasp Proposal NetworkXinghao Zhu+, Lingfeng Sun+ , Yongxiang Fan and Masayoshi Tomizuka + denotes equal contributions. Welcome to this page. This page supplements our ICRA2021 paper">
+<meta name="twitter:description" content="6-DoF Contrastive Grasp Proposal NetworkXinghao Zhu+, Lingfeng Sun+ , Yongxiang Fan and Masayoshi Tomizuka + denotes equal contributions. Welcome to this page. This page supplements our ICRA2021 paper">
   <link rel="canonical" href="https://rolandzhu.github.io/2020/10/29/CGPN/">
 
 
@@ -250,7 +250,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-30 01:06:11" itemprop="dateModified" datetime="2020-10-30T01:06:11-07:00">2020-10-30</time>
+                <time title="Modified: 2020-11-04 13:31:33" itemprop="dateModified" datetime="2020-11-04T13:31:33-08:00">2020-11-04</time>
               </span>
             
           
@@ -266,11 +266,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="Contrastive-6-DoF-Grasp-Proposal-Network"><a href="#Contrastive-6-DoF-Grasp-Proposal-Network" class="headerlink" title="Contrastive 6-DoF Grasp Proposal Network"></a>Contrastive 6-DoF Grasp Proposal Network</h4><p><strong>Xinghao Zhu<sup>+</sup>, Lingfeng Sun<sup>+</sup> , Yongxiang Fan and Masayoshi Tomizuka</strong></p>
+        <h4 id="6-DoF-Contrastive-Grasp-Proposal-Network"><a href="#6-DoF-Contrastive-Grasp-Proposal-Network" class="headerlink" title="6-DoF Contrastive Grasp Proposal Network"></a>6-DoF Contrastive Grasp Proposal Network</h4><p><strong>Xinghao Zhu<sup>+</sup>, Lingfeng Sun<sup>+</sup> , Yongxiang Fan and Masayoshi Tomizuka</strong></p>
 <p>+ denotes equal contributions.</p>
-<p>Welcome to this page. This page supplements our ICRA2021 paper submission, in which we present Contrastive 6-DoF Grasp Proposal Network.</p>
+<p>Welcome to this page. This page supplements our ICRA2021 paper submission, in which we present 6-DoF Contrastive Grasp Proposal Network.</p>
+<p>Proposing grasp poses for novel objects is an essential component for any robot manipulation task. Planning six degrees of freedom (DoF) grasps with a single camera, however, is challenging due to the complex object shape, incomplete object information, and sensor noise. In this paper, we present a 6-DoF contrastive grasp proposal network (CGPN) to infer 6-DoF grasps from a single-view depth image. First, an image encoder is used to extract the feature map from the input depth image, after which 3-DoF grasp regions are proposed from the feature map with a rotated region proposal network. Feature vectors that within the proposed grasp regions are then extracted and refined to 6-DoF grasps. The proposed model is trained offline with synthetic grasp data. To improve the robustness in reality and bridge the simulation-to-real gap, we further introduce a contrastive learning module and variant image processing techniques during the training. CGPN can locate collision-free grasps of an object using a single-view depth image within 0.5 second. Experiments on a physical robot further demonstrate the effectiveness of the algorithm.</p>
 <hr>
-<p>TODO</p>
+<h5 id="Experimental-Video"><a href="#Experimental-Video" class="headerlink" title="Experimental Video"></a>Experimental Video</h5><iframe width="560" height="315" src="https://www.youtube.com/embed/rXldZyf6Kks" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
     </div>
 
