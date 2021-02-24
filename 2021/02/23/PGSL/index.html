@@ -56,18 +56,18 @@
   };
 </script>
 
-  <meta name="description" content="6-DoF Contrastive Grasp Proposal NetworkXinghao Zhu+, Lingfeng Sun+ , Yongxiang Fan and Masayoshi Tomizuka + denotes equal contributions. Welcome to this page. This page supplements our ICRA2021 paper">
+  <meta name="description" content="Learn to Grasp with Less Supervision: A Data-Efficient Posterior Grasp Sampling LossXinghao Zhu, Yefan Zhou, Yongxiang Fan, Lingfeng Sun, and Masayoshi Tomizuka Welcome to this page. This page supplem">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Research Introduction">
-<meta property="og:url" content="https://rolandzhu.github.io/2020/10/29/CGPN/index.html">
+<meta property="og:url" content="https://rolandzhu.github.io/2021/02/23/PGSL/index.html">
 <meta property="og:site_name" content="Xinghao Zhu (朱行昊)">
-<meta property="og:description" content="6-DoF Contrastive Grasp Proposal NetworkXinghao Zhu+, Lingfeng Sun+ , Yongxiang Fan and Masayoshi Tomizuka + denotes equal contributions. Welcome to this page. This page supplements our ICRA2021 paper">
+<meta property="og:description" content="Learn to Grasp with Less Supervision: A Data-Efficient Posterior Grasp Sampling LossXinghao Zhu, Yefan Zhou, Yongxiang Fan, Lingfeng Sun, and Masayoshi Tomizuka Welcome to this page. This page supplem">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-11-04T21:31:33.459Z">
+<meta property="og:updated_time" content="2021-02-24T06:09:44.595Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Research Introduction">
-<meta name="twitter:description" content="6-DoF Contrastive Grasp Proposal NetworkXinghao Zhu+, Lingfeng Sun+ , Yongxiang Fan and Masayoshi Tomizuka + denotes equal contributions. Welcome to this page. This page supplements our ICRA2021 paper">
-  <link rel="canonical" href="https://rolandzhu.github.io/2020/10/29/CGPN/">
+<meta name="twitter:description" content="Learn to Grasp with Less Supervision: A Data-Efficient Posterior Grasp Sampling LossXinghao Zhu, Yefan Zhou, Yongxiang Fan, Lingfeng Sun, and Masayoshi Tomizuka Welcome to this page. This page supplem">
+  <link rel="canonical" href="https://rolandzhu.github.io/2021/02/23/PGSL/">
 
 
 <script id="page-configurations">
@@ -211,7 +211,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://rolandzhu.github.io/2020/10/29/CGPN/">
+    <link itemprop="mainEntityOfPage" href="https://rolandzhu.github.io/2021/02/23/PGSL/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xinghao Zhu">
@@ -239,19 +239,11 @@
                 
               
 
-              <time title="Created: 2020-10-29 22:10:11" itemprop="dateCreated datePublished" datetime="2020-10-29T22:10:11-07:00">2020-10-29</time>
+              <time title="Created: 2021-02-23 23:11:08 / Modified: 22:09:44" itemprop="dateCreated datePublished" datetime="2021-02-23T23:11:08-08:00">2021-02-23</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-04 13:31:33" itemprop="dateModified" datetime="2020-11-04T13:31:33-08:00">2020-11-04</time>
-              </span>
             
           
 
@@ -266,14 +258,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="6-DoF-Contrastive-Grasp-Proposal-Network"><a href="#6-DoF-Contrastive-Grasp-Proposal-Network" class="headerlink" title="6-DoF Contrastive Grasp Proposal Network"></a>6-DoF Contrastive Grasp Proposal Network</h4><p><strong>Xinghao Zhu<sup>+</sup>, Lingfeng Sun<sup>+</sup> , Yongxiang Fan and Masayoshi Tomizuka</strong></p>
-<p>+ denotes equal contributions.</p>
-<p>Welcome to this page. This page supplements our ICRA2021 paper submission, in which we present 6-DoF Contrastive Grasp Proposal Network.</p>
-<p>Proposing grasp poses for novel objects is an essential component for any robot manipulation task. Planning six degrees of freedom (DoF) grasps with a single camera, however, is challenging due to the complex object shape, incomplete object information, and sensor noise. In this paper, we present a 6-DoF contrastive grasp proposal network (CGPN) to infer 6-DoF grasps from a single-view depth image. First, an image encoder is used to extract the feature map from the input depth image, after which 3-DoF grasp regions are proposed from the feature map with a rotated region proposal network. Feature vectors that within the proposed grasp regions are then extracted and refined to 6-DoF grasps. The proposed model is trained offline with synthetic grasp data. To improve the robustness in reality and bridge the simulation-to-real gap, we further introduce a contrastive learning module and variant image processing techniques during the training. CGPN can locate collision-free grasps of an object using a single-view depth image within 0.5 second. Experiments on a physical robot further demonstrate the effectiveness of the algorithm.</p>
+        <h4 id="Learn-to-Grasp-with-Less-Supervision-A-Data-Efficient-Posterior-Grasp-Sampling-Loss"><a href="#Learn-to-Grasp-with-Less-Supervision-A-Data-Efficient-Posterior-Grasp-Sampling-Loss" class="headerlink" title="Learn to Grasp with Less Supervision: A Data-Efficient Posterior Grasp Sampling Loss"></a>Learn to Grasp with Less Supervision: A Data-Efficient Posterior Grasp Sampling Loss</h4><p><strong>Xinghao Zhu, Yefan Zhou, Yongxiang Fan, Lingfeng Sun, and Masayoshi Tomizuka</strong></p>
+<p>Welcome to this page. This page supplements our RAL2021 paper submission, in which we present a data-efficient posterior grasp sampling loss</p>
+<p>Robotic grasping for a diverse set of objects is an essential component for any robot manipulation tasks.<br>One promising approach is to learn deep grasping models from training datasets of object images and success grasp labels. Approaches in this category require millions of data to train deep models. However, empirical grasping datasets typically consist of sparsely-labeled samples (i.e., scarce successful grasp labels in each image). This paper proposes a Posterior Grasp Sampling Loss (PGSL) to tackle the data sparsity issue. The proposed method regards successful grasp labels are sampled from a ground-truth grasp distribution and aims to recover such dense map. PGSL is utilized for training a fully convolutional network that evaluates thousands of grasp candidates simultaneously. Training results suggest that models based on PGSL can learn to grasp with datasets compose of 2 labels per image, considering 8$\times$ more data-efficient than current state-of-the-art techniques. Meanwhile, physical robot experiments demonstrate an equivalent performance in detecting robust grasps at a 91.8% grasp success rate on household objects.</p>
 <hr>
-<h5 id="Experimental-Video"><a href="#Experimental-Video" class="headerlink" title="Experimental Video"></a>Experimental Video</h5><iframe width="560" height="315" src="https://www.youtube.com/embed/rXldZyf6Kks" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
+<h5 id="Experimental-Video"><a href="#Experimental-Video" class="headerlink" title="Experimental Video"></a>Experimental Video</h5>
     </div>
 
     
@@ -289,7 +278,7 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2020/10/28/MF-GPD/" rel="next" title="Research Introduction">
+                <a href="/2020/10/29/CGPN/" rel="next" title="Research Introduction">
                   <i class="fa fa-chevron-left"></i> Research Introduction
                 </a>
               
@@ -298,10 +287,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2021/02/23/PGSL/" rel="prev" title="Research Introduction">
-                  Research Introduction <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
