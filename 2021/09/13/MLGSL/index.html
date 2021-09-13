@@ -56,18 +56,18 @@
   };
 </script>
 
-  <meta name="description" content="Learn to Grasp with Less Supervision: A Data-Efficient Posterior Grasp Sampling LossXinghao Zhu, Yefan Zhou, Yongxiang Fan, Lingfeng Sun, and Masayoshi Tomizuka Welcome to this page. This page supplem">
+  <meta name="description" content="Learn to Grasp with Less Supervision: A Data-Efficient Maximum Likelihood Grasp Sampling LossXinghao Zhu, Yefan Zhou, Yongxiang Fan, Jianyu Chen, and Masayoshi Tomizuka Welcome to this page. This page">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Research Introduction">
-<meta property="og:url" content="https://rolandzhu.github.io/2021/02/23/PGSL/index.html">
+<meta property="og:url" content="https://rolandzhu.github.io/2021/09/13/MLGSL/index.html">
 <meta property="og:site_name" content="Xinghao Zhu (朱行昊)">
-<meta property="og:description" content="Learn to Grasp with Less Supervision: A Data-Efficient Posterior Grasp Sampling LossXinghao Zhu, Yefan Zhou, Yongxiang Fan, Lingfeng Sun, and Masayoshi Tomizuka Welcome to this page. This page supplem">
+<meta property="og:description" content="Learn to Grasp with Less Supervision: A Data-Efficient Maximum Likelihood Grasp Sampling LossXinghao Zhu, Yefan Zhou, Yongxiang Fan, Jianyu Chen, and Masayoshi Tomizuka Welcome to this page. This page">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-02-24T07:38:20.683Z">
+<meta property="og:updated_time" content="2021-09-13T16:32:14.397Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Research Introduction">
-<meta name="twitter:description" content="Learn to Grasp with Less Supervision: A Data-Efficient Posterior Grasp Sampling LossXinghao Zhu, Yefan Zhou, Yongxiang Fan, Lingfeng Sun, and Masayoshi Tomizuka Welcome to this page. This page supplem">
-  <link rel="canonical" href="https://rolandzhu.github.io/2021/02/23/PGSL/">
+<meta name="twitter:description" content="Learn to Grasp with Less Supervision: A Data-Efficient Maximum Likelihood Grasp Sampling LossXinghao Zhu, Yefan Zhou, Yongxiang Fan, Jianyu Chen, and Masayoshi Tomizuka Welcome to this page. This page">
+  <link rel="canonical" href="https://rolandzhu.github.io/2021/09/13/MLGSL/">
 
 
 <script id="page-configurations">
@@ -211,7 +211,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://rolandzhu.github.io/2021/02/23/PGSL/">
+    <link itemprop="mainEntityOfPage" href="https://rolandzhu.github.io/2021/09/13/MLGSL/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xinghao Zhu">
@@ -239,7 +239,7 @@
                 
               
 
-              <time title="Created: 2021-02-23 23:11:08 / Modified: 23:38:20" itemprop="dateCreated datePublished" datetime="2021-02-23T23:11:08-08:00">2021-02-23</time>
+              <time title="Created: 2021-09-13 23:11:08 / Modified: 09:32:14" itemprop="dateCreated datePublished" datetime="2021-09-13T23:11:08-07:00">2021-09-13</time>
             </span>
           
             
@@ -258,12 +258,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="Learn-to-Grasp-with-Less-Supervision-A-Data-Efficient-Posterior-Grasp-Sampling-Loss"><a href="#Learn-to-Grasp-with-Less-Supervision-A-Data-Efficient-Posterior-Grasp-Sampling-Loss" class="headerlink" title="Learn to Grasp with Less Supervision: A Data-Efficient Posterior Grasp Sampling Loss"></a>Learn to Grasp with Less Supervision: A Data-Efficient Posterior Grasp Sampling Loss</h4><p><strong>Xinghao Zhu, Yefan Zhou, Yongxiang Fan, Lingfeng Sun, and Masayoshi Tomizuka</strong></p>
-<p>Welcome to this page. This page supplements our RAL2021 paper submission, in which we present a data-efficient posterior grasp sampling loss</p>
-<p>Robotic grasping for a diverse set of objects is an essential component for any robot manipulation tasks. One promising approach is to learn deep grasping models from training datasets of object images and success grasp labels. Approaches in this category require millions of data to train deep models. However, empirical grasping datasets typically consist of sparsely-labeled samples (i.e., scarce successful grasp labels in each image). This paper proposes a Posterior Grasp Sampling Loss (PGSL) to tackle the data sparsity issue. The proposed method regards successful grasp labels are sampled from a ground-truth grasp distribution and aims to recover such dense map. PGSL is utilized for training a fully convolutional network that evaluates thousands of grasp candidates simultaneously. Training results suggest that models based on PGSL can learn to grasp with datasets compose of 2 labels per image, considering 8$\times$ more data-efficient than current state-of-the-art techniques. Meanwhile, physical robot experiments demonstrate an equivalent performance in detecting robust grasps at a 91.8% grasp success rate on household objects.</p>
+        <h4 id="Learn-to-Grasp-with-Less-Supervision-A-Data-Efficient-Maximum-Likelihood-Grasp-Sampling-Loss"><a href="#Learn-to-Grasp-with-Less-Supervision-A-Data-Efficient-Maximum-Likelihood-Grasp-Sampling-Loss" class="headerlink" title="Learn to Grasp with Less Supervision: A Data-Efficient Maximum Likelihood Grasp Sampling Loss"></a>Learn to Grasp with Less Supervision: A Data-Efficient Maximum Likelihood Grasp Sampling Loss</h4><p><strong>Xinghao Zhu, Yefan Zhou, Yongxiang Fan, Jianyu Chen, and Masayoshi Tomizuka</strong></p>
+<p>Welcome to this page. This page supplements our ICRA paper submission, in which we present a data-efficient maximum likelihood grasp sampling loss</p>
+<p>Robotic grasping for a diverse set of objects is essential in many robot manipulation tasks. One promising approach is to learn deep grasping models from training datasets of object images and grasp labels. Approaches in this category require millions of data to train deep models. However, empirical grasping datasets typically consist of sparsely labeled samples (i.e., a small number of successful grasp labels in each image). The data sparsity issue can lead to insufficient supervision and false-negative labels, and thus poor learning results. This paper proposes a Maximum Likelihood Grasp Sampling Loss (MLGSL) to tackle the data sparsity issue. The proposed method supposes that successful grasps are  stochastically sampled from the predicted grasp distribution and maximizes the observing likelihood. MLGSL is utilized for training a fully convolutional network that generates thousands of grasps simultaneously. Training results suggest that models based on MLGSL can learn to grasp with datasets composing of 2 labels per image. Compared to previous works, which require training datasets of 16 labels per image, MLGSL is 8$\times$ more data-efficient. Meanwhile, physical robot experiments demonstrate an equivalent performance at a 90.7% grasp success rate on household objects.</p>
 <hr>
-<h5 id="Experimental-Video"><a href="#Experimental-Video" class="headerlink" title="Experimental Video"></a>Experimental Video</h5><iframe width="560" height="315" src="https://www.youtube.com/embed/A3KClUfIlck" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<h5 id="Experimental-Video"><a href="#Experimental-Video" class="headerlink" title="Experimental Video"></a>Experimental Video</h5><p>TODO</p>
+<hr>
+<h5 id="Code-and-Models"><a href="#Code-and-Models" class="headerlink" title="Code and Models"></a>Code and Models</h5><p>Code and pre-trained models will be open-sourced soon…</p>
 
     </div>
 
@@ -280,7 +281,7 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2020/10/29/CGPN/" rel="next" title="Research Introduction">
+                <a href="/2021/09/12/TactileGNN/" rel="next" title="Research Introduction">
                   <i class="fa fa-chevron-left"></i> Research Introduction
                 </a>
               

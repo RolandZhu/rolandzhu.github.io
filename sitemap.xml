@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rolandzhu.github.io/Research/index.html</loc>
+    
+    <lastmod>2021-09-13T16:55:03.900Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://rolandzhu.github.io/Publications/index.html</loc>
     
-    <lastmod>2021-04-29T20:15:43.093Z</lastmod>
+    <lastmod>2021-09-13T16:41:22.212Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://rolandzhu.github.io/Coursework/index.html</loc>
+    
+    <lastmod>2021-09-13T16:40:37.989Z</lastmod>
     
   </url>
   
@@ -19,20 +33,6 @@
     <loc>https://rolandzhu.github.io/Home/index.html</loc>
     
     <lastmod>2021-04-29T20:12:32.981Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rolandzhu.github.io/Research/index.html</loc>
-    
-    <lastmod>2021-04-29T20:07:49.663Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://rolandzhu.github.io/Coursework/index.html</loc>
-    
-    <lastmod>2020-12-18T19:56:45.459Z</lastmod>
     
   </url>
   
