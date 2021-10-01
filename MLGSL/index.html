@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Xinghao Zhu (朱行昊)">
 <meta property="og:description" content="Learn to Grasp with Less Supervision: A Data-Efficient Maximum Likelihood Grasp Sampling LossXinghao Zhu, Yefan Zhou, Yongxiang Fan, Jianyu Chen, and Masayoshi Tomizuka Welcome to this page. This page">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-09-13T16:56:17.882Z">
+<meta property="og:updated_time" content="2021-10-01T18:10:23.689Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Research Introduction">
 <meta name="twitter:description" content="Learn to Grasp with Less Supervision: A Data-Efficient Maximum Likelihood Grasp Sampling LossXinghao Zhu, Yefan Zhou, Yongxiang Fan, Jianyu Chen, and Masayoshi Tomizuka Welcome to this page. This page">
@@ -239,11 +239,19 @@
                 
               
 
-              <time title="Created: 2021-09-13 23:11:08 / Modified: 09:56:17" itemprop="dateCreated datePublished" datetime="2021-09-13T23:11:08-07:00">2021-09-13</time>
+              <time title="Created: 2021-09-13 23:11:08" itemprop="dateCreated datePublished" datetime="2021-09-13T23:11:08-07:00">2021-09-13</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-10-01 11:10:23" itemprop="dateModified" datetime="2021-10-01T11:10:23-07:00">2021-10-01</time>
+              </span>
             
           
 
@@ -259,12 +267,22 @@
 
       
         <h4 id="Learn-to-Grasp-with-Less-Supervision-A-Data-Efficient-Maximum-Likelihood-Grasp-Sampling-Loss"><a href="#Learn-to-Grasp-with-Less-Supervision-A-Data-Efficient-Maximum-Likelihood-Grasp-Sampling-Loss" class="headerlink" title="Learn to Grasp with Less Supervision: A Data-Efficient Maximum Likelihood Grasp Sampling Loss"></a>Learn to Grasp with Less Supervision: A Data-Efficient Maximum Likelihood Grasp Sampling Loss</h4><p><strong>Xinghao Zhu, Yefan Zhou, Yongxiang Fan, Jianyu Chen, and Masayoshi Tomizuka</strong></p>
-<p>Welcome to this page. This page supplements our ICRA paper submission, in which we present a data-efficient maximum likelihood grasp sampling loss</p>
-<p>Robotic grasping for a diverse set of objects is essential in many robot manipulation tasks. One promising approach is to learn deep grasping models from training datasets of object images and grasp labels. Approaches in this category require millions of data to train deep models. However, empirical grasping datasets typically consist of sparsely labeled samples (i.e., a small number of successful grasp labels in each image). The data sparsity issue can lead to insufficient supervision and false-negative labels, and thus poor learning results. This paper proposes a Maximum Likelihood Grasp Sampling Loss (MLGSL) to tackle the data sparsity issue. The proposed method supposes that successful grasps are  stochastically sampled from the predicted grasp distribution and maximizes the observing likelihood. MLGSL is utilized for training a fully convolutional network that generates thousands of grasps simultaneously. Training results suggest that models based on MLGSL can learn to grasp with datasets composing of 2 labels per image. Compared to previous works, which require training datasets of 16 labels per image, MLGSL is 8x more data-efficient. Meanwhile, physical robot experiments demonstrate an equivalent performance at a 90.7% grasp success rate on household objects.</p>
+<p>Welcome to this page. This page supplements our ICRA paper submission, in which we present a data-efficient maximum likelihood grasp sampling loss.</p>
+<p>Robotic grasping for a diverse set of objects is essential in many robot manipulation tasks. One promising approach is to learn deep grasping models from large training datasets of object images and grasp labels. However, empirical grasping datasets are typically sparsely labeled (i.e., a small number of successful grasp labels in each image). The data sparsity issue can lead to insufficient supervision and false-negative labels, and thus results in poor learning results.</p>
+<p>This paper proposes a Maximum Likelihood Grasp Sampling Loss (MLGSL) to tackle the data sparsity issue. The proposed method supposes that successful grasps are stochastically sampled from the predicted grasp distribution and maximizes the observing likelihood. MLGSL is utilized for training a fully convolutional network that generates thousands of grasps simultaneously. Training results suggest that models based on MLGSL can learn to grasp with datasets composing of 2 labels per image. Compared to previous works, which require training datasets of 16 labels per image, MLGSL is 8x more data-efficient. Meanwhile, physical robot experiments demonstrate an equivalent performance at a 90.7% grasp success rate on household objects.</p>
 <hr>
-<h5 id="Experimental-Video"><a href="#Experimental-Video" class="headerlink" title="Experimental Video"></a>Experimental Video</h5><p>TODO</p>
+<h5 id="Video"><a href="#Video" class="headerlink" title="Video"></a>Video</h5><iframe width="560" height="315" src="https://www.youtube.com/embed/vHTMWdj4n7o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <hr>
-<h5 id="Code-and-Models"><a href="#Code-and-Models" class="headerlink" title="Code and Models"></a>Code and Models</h5><p>Code and pre-trained models will be open-sourced soon…</p>
+<h5 id="Proposed-Methods"><a href="#Proposed-Methods" class="headerlink" title="Proposed Methods"></a>Proposed Methods</h5><p>We briefly introduce the method here.</p>
+<h6 id="Grasp-Representations"><a href="#Grasp-Representations" class="headerlink" title="Grasp Representations"></a>Grasp Representations</h6><p>This work focuses on planar grasps in the image plane. Each grasp is represented by its pixel location, gripper’s rotation and width in the image. We further assign a grasp quality for each grasp, indicating the grasp success rate. Empirical datasets contain a small number of success grasp labels for each image, where the grasp quality is high since they are guaranteed to succeed.</p>
+<p>We refer to the set of grasps in the image as the grasp configuration map, where the map contains values of grasp quality, rotation, and width at each pixel of the image. We then use a neural network to predict the grasp configuration map.</p>
+<h6 id="Grasp-Sampling-Process"><a href="#Grasp-Sampling-Process" class="headerlink" title="Grasp Sampling Process"></a>Grasp Sampling Process</h6><p>At execution, grasps are selected based on the predicted configuration maps. First, a grasp pixel is drawn conditioned on the quality map. Categorical distribution is used to describe the sampling process. Each pixel is a category with a probability proportional to the predicted quality. This suggests that for each grasp pixel, the higher the grasp quality is, the more chance it can be selected to execute. Then, corresponding rotation and width are selected from other maps.</p>
+<h6 id="Maximum-Likelihood-Grasp-Sampling-Loss"><a href="#Maximum-Likelihood-Grasp-Sampling-Loss" class="headerlink" title="Maximum Likelihood Grasp Sampling Loss"></a>Maximum Likelihood Grasp Sampling Loss</h6><p>This paper assumes that success grasp labels from the dataset are chosen from the prediction maps based on the above selection procedure. To optimize the learning performance, we propose to maximize the chance of observing success labels using a maximum likelihood estimation (MLE).</p>
+<p>The derived MLGSL minimizes a pixel selection loss and two pixel-wise regression losses. The main difference between MLGSL and others is MLGSL only uses existing labels. Previous works regard unlabeled pixels as negatives and estimate the quality for each grasp. MLGSL directly predicts whether a pixel is the best grasp point with the proposed grasp selection model. Specifically, MLGSL estimates the likelihood that each pixel is the most robust grasp point and maximizes the likelihood for success grasp labels. Estimating grasp qualities for each pixel is challenging due to only scarce label exists and the false-negative problem. By contrast, MLGSL directly optimizes the likelihood for each grasp and is more reliable and easier to converge.</p>
+<p>For more details of the methods, experiments, and discussions, please refer to our manuscript.</p>
+<hr>
+<h5 id="Code-and-Models"><a href="#Code-and-Models" class="headerlink" title="Code and Models"></a>Code and Models</h5><p>Code and pre-trained models will be open-sourced soon.</p>
 
     </div>
 
