@@ -52,10 +52,9 @@ table {
 }
 
 #body{
-    font-family: roboto, sans-serif;
-    /* color: #a0a8b0; */
-    /* color: #191e3f; */
-    color: #494949;
+    font-family: Verdana, sans-serif;
+    /* font-family: Arial, sans-serif; */
+    color: #2e2e2e;
 }
 
 p {
@@ -300,9 +299,9 @@ h3 {
 
 
 .research-thumb {
-    width: 170px;
+    width: 160px;
     float: left;
-    margin-top: 7px;
+    margin-top: 5px;
     padding-right: 30px;
     margin-bottom: 20px;
 }
@@ -333,8 +332,12 @@ h3 {
 }
 
 .research-proj p {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 15spx;
+    line-height: 22px;
+}
+
+.research-proj b {
+    font-weight: 700;
 }
 
 .research-proj p strong {
